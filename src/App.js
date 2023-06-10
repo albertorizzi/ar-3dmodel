@@ -14,8 +14,8 @@ function App() {
         onCreated={({ gl }) => {
           gl.setSize(window.innerWidth, window.innerHeight)
         }}>
-        <ambientLight />
-        <pointLight position={[10, 10, 0]} intensity={10.0} />
+        {/* <ambientLight />
+        <pointLight position={[10, 10, 0]} intensity={10.0} /> */}
         <ARMarker
           params={{ smooth: true }}
           type={"pattern"}
