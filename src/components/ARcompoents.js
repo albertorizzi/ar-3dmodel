@@ -13,13 +13,18 @@ import RenderGLTFModel from './RenderGLTFModel';
 // }
 
 const ArModel = () => {
-    console.log("ARMOdel")
-    return RenderGLTFModel('data/models/disney_infinity_mr_incredible/scene.gltf', 0.01)
+    console.log("ArModel")
+    return RenderGLTFModel('data/models/disney_infinity_mr_incredible/scene.gltf', 0.03)
+}
+
+const ArModel1 = () => {
+    console.log("ArModel1")
+    return RenderGLTFModel('data/models/disney_infinity_woody/scene.gltf', 0.03)
 }
 
 const ArModel2 = () => {
-    console.log("ARMOdel2")
-    return RenderGLTFModel('data/models/disney_infinity_woody/scene.gltf', 0.01) 
+    console.log("ArModel2")
+    return RenderGLTFModel('data/models/disney_infinity_dash/scene.gltf', 0.03)
 }
 
 function ARcomponents() {
@@ -51,7 +56,6 @@ function ARcomponents() {
                     }}>
 
                     <ArModel />
-
                 </ARMarker>
 
                 <ARMarker
@@ -64,8 +68,20 @@ function ARcomponents() {
                         console.log("Marker found")
                     }}>
 
-                    <ArModel2 />
+                    <ArModel1 />
+                </ARMarker>
 
+                 <ARMarker
+                    params={{ smooth: true }}
+                    type={"barcode"}
+                    //patternUrl={"data/pattern/rolegg.patt"}
+
+                    barcodeValue={2}
+                    onMarkerFound={() => {
+                        console.log("Marker found")
+                    }}>
+
+                    <ArModel2 />
                 </ARMarker>
             </ARCanvas>
         </div>
