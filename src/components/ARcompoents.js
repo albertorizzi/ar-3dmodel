@@ -4,12 +4,12 @@ import RenderGLTFModel from './RenderGLTFModel';
 
 const ArModel = () => {
     console.log("ARMOdel")
-    return RenderGLTFModel('data/models/linee.gltf', 2)
+    return RenderGLTFModel('data/models-ex/ammonium.gltf', 0.5)
 }
 
 const ArModel2 = () => {
     console.log("ARMOdel2")
-    return RenderGLTFModel('data/models/roleggs0098_2.gltf', 2)
+    return RenderGLTFModel('data/models-ex/sprout.gltf', 0.5)
 }
 
 function ARcomponents() {
