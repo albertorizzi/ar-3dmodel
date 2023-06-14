@@ -19,7 +19,7 @@ const ArModel = () => {
 
 const ArModel2 = () => {
     console.log("ARMOdel2")
-    return RenderGLTFModel('data/models/roleggs0098_2.gltf', 2)
+    return RenderGLTFModel('data/models/roleggs0098_2.gltf', 2) 
 }
 
 function ARcomponents() {
