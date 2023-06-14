@@ -28,7 +28,7 @@ function ARcomponents() {
     return (
         <div>
             <ARCanvas
-                gl={{ alpha: true, antialias: false, powerPreference: "default", physicallyCorrectLights: true, precision: "highp", logarithmicDepthBuffer: true }}
+                gl={{ antialias: false, powerPreference: "default", physicallyCorrectLights: true }}
                 onCameraStreamReady={() => console.log("Camera stream ready")}
                 onCameraStreamError={() => console.error("Camera stream error")}
                 onCreated={({ gl }) => {
