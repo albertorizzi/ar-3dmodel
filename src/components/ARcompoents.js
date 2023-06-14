@@ -3,7 +3,13 @@ import { ARCanvas, ARMarker } from '@artcom/react-three-arjs/lib/ar';
 import RenderGLTFModel from './RenderGLTFModel';
 
 const ArModel = () => {
-    return RenderGLTFModel('data/models/model_corr1.gltf', 3)
+    console.log("ARMOdel")
+    return RenderGLTFModel('data/models/linee.gltf', 3)
+}
+
+const ArModel2 = () => {
+    console.log("ARMOdel2")
+    return RenderGLTFModel('data/models/model_corr1.gltf', 2)
 }
 
 function ARcomponents() {
@@ -22,14 +28,30 @@ function ARcomponents() {
                 <pointLight position={[10, 10, 0]} intensity={10.0} />
                 <ARMarker
                     params={{ smooth: true }}
-                    type={"pattern"}
-                    patternUrl={"data/pattern/patt.hiro"}
+                    type={"barcode"}
+                    //patternUrl={"data/pattern/rolegg.patt"}
+                
+                    barcodeValue={0}
                     onMarkerFound={() => {
                         console.log("Marker found")
                     }}>
 
                     <ArModel />
+           
+                </ARMarker>
 
+                <ARMarker
+                    params={{ smooth: true }}
+                    type={"barcode"}
+                    //patternUrl={"data/pattern/rolegg.patt"}
+                
+                    barcodeValue={1}
+                    onMarkerFound={() => {
+                        console.log("Marker found")
+                    }}>
+
+                    <ArModel2 />
+           
                 </ARMarker>
             </ARCanvas>
         </div>

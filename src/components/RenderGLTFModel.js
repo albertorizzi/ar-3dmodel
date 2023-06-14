@@ -4,6 +4,8 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 
 function RenderGLTFModel(gltfURL, scale) {
+
+    console.log("RenderGLTFModel")
     // const gltf = useLoader(GLTFLoader, gltfURL);
     // return (
     //     <primitive
