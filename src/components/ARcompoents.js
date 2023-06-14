@@ -27,9 +27,12 @@ const ArModel2 = () => {
     return RenderGLTFModel('data/models/disney_infinity_dash/scene.gltf', 0.02)
 }
 
+const ArModel3 = () => {
+    console.log("ArModel3")
+    return RenderGLTFModel('data/models/disney_infinity_jessie/scene.gltf', 0.02)
+}
+
 function ARcomponents() {
-
-
     return (
         <div>
             <ARCanvas
@@ -48,8 +51,6 @@ function ARcomponents() {
                 <ARMarker
                     params={{ smooth: true }}
                     type={"barcode"}
-                    //patternUrl={"data/pattern/rolegg.patt"}
-
                     barcodeValue={0}
                     onMarkerFound={() => {
                         console.log("Marker found")
@@ -61,8 +62,6 @@ function ARcomponents() {
                 <ARMarker
                     params={{ smooth: true }}
                     type={"barcode"}
-                    //patternUrl={"data/pattern/rolegg.patt"}
-
                     barcodeValue={1}
                     onMarkerFound={() => {
                         console.log("Marker found")
@@ -71,17 +70,26 @@ function ARcomponents() {
                     <ArModel1 />
                 </ARMarker>
 
-                 <ARMarker
+                <ARMarker
                     params={{ smooth: true }}
                     type={"barcode"}
-                    //patternUrl={"data/pattern/rolegg.patt"}
-
                     barcodeValue={2}
                     onMarkerFound={() => {
                         console.log("Marker found")
                     }}>
 
                     <ArModel2 />
+                </ARMarker>
+
+                <ARMarker
+                    params={{ smooth: true }}
+                    type={"pattern"}
+                    patternUrl={"data/pattern/patt.hiro"}
+                    onMarkerFound={() => {
+                        console.log("Marker found")
+                    }}>
+
+                    <ArModel3 />
                 </ARMarker>
             </ARCanvas>
         </div>
