@@ -14,17 +14,17 @@ import RenderGLTFModel from './RenderGLTFModel';
 
 const ArModel = () => {
     console.log("ArModel")
-    return RenderGLTFModel('data/models/disney_infinity_mr_incredible/scene.gltf', 0.03)
+    return RenderGLTFModel('data/models/disney_infinity_mr_incredible/scene.gltf', 0.01)
 }
 
 const ArModel1 = () => {
     console.log("ArModel1")
-    return RenderGLTFModel('data/models/disney_infinity_woody/scene.gltf', 0.03)
+    return RenderGLTFModel('data/models/disney_infinity_woody/scene.gltf', 0.02)
 }
 
 const ArModel2 = () => {
     console.log("ArModel2")
-    return RenderGLTFModel('data/models/disney_infinity_dash/scene.gltf', 0.03)
+    return RenderGLTFModel('data/models/disney_infinity_dash/scene.gltf', 0.02)
 }
 
 function ARcomponents() {
