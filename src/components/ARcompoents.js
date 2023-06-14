@@ -3,7 +3,7 @@ import { ARCanvas, ARMarker } from '@artcom/react-three-arjs/lib/ar';
 import RenderGLTFModel from './RenderGLTFModel';
 
 const ArModel = () => {
-    return RenderGLTFModel('data/models/model_corr1.gltf', 1)
+    return RenderGLTFModel('data/models/model_corr1.gltf', 3)
 }
 
 function ARcomponents() {
