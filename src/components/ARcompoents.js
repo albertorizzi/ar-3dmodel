@@ -19,17 +19,17 @@ const ArModel = () => {
 
 const ArModel1 = () => {
     console.log("ArModel1")
-    return RenderGLTFModel('data/models/disney_infinity_woody/scene.gltf', 0.02)
+    return RenderGLTFModel('data/models/disney_infinity_woody/scene.gltf', 0.015)
 }
 
 const ArModel2 = () => {
     console.log("ArModel2")
-    return RenderGLTFModel('data/models/disney_infinity_dash/scene.gltf', 0.02)
+    return RenderGLTFModel('data/models/disney_infinity_dash/scene.gltf', 0.015)
 }
 
 const ArModel3 = () => {
     console.log("ArModel3")
-    return RenderGLTFModel('data/models/disney_infinity_jessie/scene.gltf', 0.02)
+    return RenderGLTFModel('data/models/disney_infinity_jessie/scene.gltf', 0.015)
 }
 
 function ARcomponents() {
@@ -62,7 +62,7 @@ function ARcomponents() {
                 <ARMarker
                     params={{ smooth: true }}
                     type={"barcode"}
-                    barcodeValue={1}
+                    barcodeValue={63}
                     onMarkerFound={() => {
                         console.log("Marker found")
                     }}>
@@ -73,7 +73,7 @@ function ARcomponents() {
                 <ARMarker
                     params={{ smooth: true }}
                     type={"barcode"}
-                    barcodeValue={2}
+                    barcodeValue={21}
                     onMarkerFound={() => {
                         console.log("Marker found")
                     }}>
